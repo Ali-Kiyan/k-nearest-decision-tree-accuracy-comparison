@@ -29,12 +29,14 @@ for(i in 1:length)
        if(Class1>k/2)
        {
          print("The query point belongs to class 1")
+         print(j)
          occupancy_test_f$knn_result[j] <- 1
        }
   
        else
        {
          print("The query belongs to class 0")
+         print(j)
          occupancy_test_f$knn_result[j]<- 0
          
        }  
@@ -42,9 +44,18 @@ for(i in 1:length)
 correct <- 0 
 for (l in 1:length_test)
 {
-   if(occupancy_test_f[l,5]==occupancy_test_f[l,6])
-   {
-     correct = correct+1 
-   }
+  if(occupancy_test_f[l,5] == occupancy_test_f[l,6])
+  {
+    correct = correct+1 
+  }
 }
-}
+
+
+
+
+
+
+
+
+    
+
